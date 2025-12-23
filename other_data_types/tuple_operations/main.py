@@ -5,11 +5,13 @@ shelf1 = ("celery", "spinach", "cucumbers")
 shelf1_update = ["tomatoes", "celery", "cilantro"]
 
 #Convert to tuples
-shelf1_update_tuple= (shelf1_update)
 
-
+shelf1_update_tuple = tuple(shelf1_update)
+shelf1_concat = shelf1 + shelf1_update_tuple
+celery_count = shelf1_concat.count("celery")
+celery_index = shelf1_concat.index("celery")
 
 #Output
-print(f"Updated Shelf #1:")
-print(f"Number of Celery:")
-print(f"Celery Index:")
+print(f"Updated Shelf #1:{shelf1_concat}")
+print(f"Number of Celery:{celery_count}")
+print(f"Celery Index:{celery_index}")
